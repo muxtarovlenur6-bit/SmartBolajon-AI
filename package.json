@@ -1,0 +1,16 @@
+{
+  "name": "smartbolajon-ai-bot",
+  "version": "1.0.0",
+  "description": "SmartBolajon AI — Telegram bot for grades 1-4 students",
+  "main": "bot.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3",
+    "dotenv": "^16.4.5"
+  }
+}

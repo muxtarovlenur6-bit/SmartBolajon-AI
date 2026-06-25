@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartBolajon AI — 1-4 sinflar uchun AI o'qituvchi</title>
+  <meta name="description" content="SmartBolajon AI — 1-4 sinf o'quvchilari uchun sun'iy intellekt yordamida o'qitish platformasi. Matematika, ona tili, ingliz tili va boshqa fanlarni o'ynab o'rganing!" />
+  <meta name="keywords" content="SmartBolajon, AI o'qituvchi, 1-sinf, 2-sinf, 3-sinf, 4-sinf, matematika, ona tili, ingliz tili, bolalar uchun, online ta'lim, o'zbek tilida" />
+  <meta name="author" content="SmartBolajon" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="SmartBolajon AI — 1-4 sinflar uchun AI o'qituvchi" />
+  <meta property="og:description" content="Sun'iy intellekt yordamida bolalar uchun qiziqarli ta'lim platformasi. Matematika, til va boshqa fanlarni o'ynab o'rganing!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://smartbolajon-ai.netlify.app" />
+  <meta property="og:locale" content="uz_UZ" />
+  <link rel="canonical" href="https://smartbolajon-ai.netlify.app" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalApplication",
+    "name": "SmartBolajon AI",
+    "description": "1-4 sinf o'quvchilari uchun sun'iy intellekt yordamida o'qitish platformasi",
+    "applicationCategory": "EducationalApplication",
+    "educationalLevel": "elementary",
+    "inLanguage": "uz",
+    "author": { "@type": "Organization", "name": "SmartBolajon" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- LOADING OVERLAY -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">SmartBolajon AI</div>
+    <div class="loading-dots">
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+    </div>
+  </div>
+
+  <!-- PARTICLES BG -->
+  <div id="particles" class="particles"></div>
+
+  <!-- SIDE DECORATIONS -->
+  <div class="side-deco left">
+    <div class="deco-circle c1"></div>
+    <div class="deco-circle c2"></div>
+    <div class="deco-circle c3"></div>
+    <div class="deco-float f1">🚀</div>
+    <div class="deco-float f2">⭐</div>
+  </div>
+  <div class="side-deco right">
+    <div class="deco-circle c4"></div>
+    <div class="deco-circle c5"></div>
+    <div class="deco-circle c6"></div>
+    <div class="deco-float f3">💡</div>
+    <div class="deco-float f4">🌟</div>
+  </div>
+
+  <!-- TOP NAV -->
+  <nav class="top-nav glass" id="topNav">
+    <div class="nav-brand" onclick="showPage('home')">
+      <div class="brand-icon-wrap"><img class="brand-logo-img" src="https://i.ibb.co/SwkCVRc9/580077c1-8358-4fe3-92ff-e50548ea6ff6.png" alt="SmartBolajon" id="mascotIcon"></div>
+      <div class="brand-text"><span class="brand-name">SmartBolajon</span><span class="brand-sub">AI o'qituvchi</span></div>
+    </div>
+    <div class="nav-items" id="navItems">
+      <button class="nav-btn active" data-page="home" onclick="showPage('home')"><span class="nav-ico">🏠</span><span class="nav-lbl">Uy</span></button>
+      <button class="nav-btn" data-page="map" onclick="showPage('map')"><span class="nav-ico">🗺️</span><span class="nav-lbl">Sayohat</span></button>
+      <button class="nav-btn" data-page="chat" onclick="showPage('chat')"><span class="nav-ico">💬</span><span class="nav-lbl">AI</span></button>
+      <button class="nav-btn" data-page="games" onclick="showPage('games')"><span class="nav-ico">🎮</span><span class="nav-lbl">O'yin</span></button>
+      <button class="nav-btn" data-page="profile" onclick="showPage('profile')"><span class="nav-ico">⭐</span><span class="nav-lbl">Profil</span></button>
+      <button class="nav-btn" data-page="telegram" onclick="showPage('telegram')"><span class="nav-ico">✈️</span><span class="nav-lbl">Bot</span></button>
+      <button class="nav-btn" data-page="parents" onclick="showPage('parents')"><span class="nav-ico">👨‍👩‍👧</span><span class="nav-lbl">Ota-ona</span></button>
+    </div>
+    <div class="nav-xp glass-light" id="navXp">
+      <span class="xp-icon">⭐</span>
+      <span class="xp-value" id="xpDisplay">0</span>
+      <span class="xp-label">XP</span>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main-content" id="mainContent">
+
+    <!-- HOME -->
+    <section class="page active" id="page-home">
+      <div class="hero-card glass-premium">
+        <div class="hero-frame-wrap">
+          <div class="hero-frame-circle">
+            <div class="hero-frame-circle-inner">
+              <img class="hero-logo-img" src="https://i.ibb.co/SwkCVRc9/580077c1-8358-4fe3-92ff-e50548ea6ff6.png" alt="SmartBolajon AI">
+            </div>
+            <div class="hero-frame-stars">
+              <span class="star">⭐</span>
+              <span class="star">🌟</span>
+              <span class="star">✨</span>
+              <span class="star">💫</span>
+              <span class="star">⭐</span>
+              <span class="star">✨</span>
+            </div>
+          </div>
+          <div class="hero-speech glass" id="heroSpeech">Salom! Bugun qiziqarli darslarimiz bor! 🎯</div>
+        </div>
+        <h1 class="hero-title">Salom, <span class="hero-name" id="studentName">Bolajon</span>! 👋</h1>
+        <p class="hero-sub">Men sening AI ustozingman. Keling, birgalikda o'rganamiz!</p>
+        <div class="hero-stats">
+          <div class="stat-card glass-light"><span class="stat-icon">⭐</span><span class="stat-num" id="xpHome">0</span><span class="stat-lbl">XP</span></div>
+          <div class="stat-card glass-light"><span class="stat-icon">🔥</span><span class="stat-num" id="streakHome">0</span><span class="stat-lbl">Kun</span></div>
+          <div class="stat-card glass-light"><span class="stat-icon">🏅</span><span class="stat-num" id="medalHome">0</span><span class="stat-lbl">Medal</span></div>
+          <div class="stat-card glass-light"><span class="stat-icon">📈</span><span class="stat-num" id="lvlHome">1</span><span class="stat-lbl">Daraja</span></div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-3d" onclick="showPage('map')"><span class="btn-ico">🗺️</span> Sayohatga chiqamiz!</button>
+          <button class="btn-3d ghost" onclick="showPage('chat')"><span class="btn-ico">💬</span> AI bilan suhbat</button>
+        </div>
+      </div>
+      <!-- LEVEL PROGRESS -->
+      <div class="level-progress-wrap glass">
+        <div class="level-progress-top">
+          <div class="level-badge"><span class="lvl-icon">🏆</span><span id="levelDisplayHome">1-daraja</span></div>
+          <div class="level-xp-text"><span id="xpCurrentHome">0</span> / <span id="xpNextHome">100</span> XP</div>
+        </div>
+        <div class="level-progress-bar">
+          <div class="level-progress-fill" id="levelProgressFill" style="width:0%"></div>
+        </div>
+        <div class="level-unlocks" id="levelUnlocks">
+          <span class="level-unlock-item unlocked">⭐ Asosiy fanlar</span>
+          <span class="level-unlock-item locked" id="lu2">🔓 Qo'shimcha fanlar</span>
+          <span class="level-unlock-item locked" id="lu3">🧩 Mantiqiy o'yinlar</span>
+          <span class="level-unlock-item locked" id="lu4">🤖 AI erkin suhbat</span>
+        </div>
+      </div>
+      <hr class="section-divider">
+      <div class="daily-reward glass" id="dailyReward" onclick="claimDaily()">
+        <div class="dr-left"><span class="dr-icon">🎁</span><span class="dr-text" id="dailyText">Kunlik sovg'ani olish</span></div>
+        <button class="btn-3d secondary small"><span class="btn-ico">🎁</span> Olish</button>
+      </div>
+      <hr class="section-divider">
+      <div class="quick-links">
+        <button class="ql-item glass" onclick="showPage('chat')"><span class="ql-icon">💬</span><span class="ql-text">AI suhbat</span></button>
+        <button class="ql-item glass" onclick="startQuiz('Matematika')"><span class="ql-icon">🧠</span><span class="ql-text">Test</span></button>
+        <button class="ql-item glass" onclick="showPage('games')"><span class="ql-icon">🎮</span><span class="ql-text">O'yinlar</span></button>
+        <button class="ql-item glass" onclick="showPage('telegram')"><span class="ql-icon">✈️</span><span class="ql-text">Telegram</span></button>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="page" id="page-map">
+      <div class="page-header"><h2 class="page-title">🗺️ Bilimlar olami</h2><p class="page-sub">Topshiriqlarni bajarib, yangi hududlarni oching!</p></div>
+      <hr class="section-divider">
+      <div class="world-container" id="worldContainer">
+        <div class="world glass active" data-world="matematika" onclick="enterWorld('Matematika')">
+          <div class="world-glow"></div>
+          <div class="world-icon">🏰</div>
+          <div class="world-name">Matematika Qirolligi</div>
+          <div class="world-progress"><div class="wp-fill" id="wp-matematika"></div></div>
+          <div class="world-pct" id="pct-matematika">0%</div>
+        </div>
+        <div class="world glass" data-world="onatili" onclick="enterWorld('Ona tili')">
+          <div class="world-glow"></div>
+          <div class="world-icon">🌲</div>
+          <div class="world-name">Ona tili O'rmoni</div>
+          <div class="world-progress"><div class="wp-fill" id="wp-onatili"></div></div>
+          <div class="world-pct" id="pct-onatili">0%</div>
+        </div>
+        <div class="world glass" data-world="oqish" onclick="enterWorld("O'qish")">
+          <div class="world-glow"></div>
+          <div class="world-icon">📚</div>
+          <div class="world-name">O'qish Shahri</div>
+          <div class="world-progress"><div class="wp-fill" id="wp-oqish"></div></div>
+          <div class="world-pct" id="pct-oqish">0%</div>
+        </div>
+        <div class="world glass" data-world="ingliz" onclick="enterWorld('Ingliz tili')">
+          <div class="world-glow"></div>
+          <div class="world-icon">🇬🇧</div>
+          <div class="world-name">Ingliz tili Shahri</div>
+          <div class="world-progress"><div class="wp-fill" id="wp-ingliz"></div></div>
+          <div class="world-pct" id="pct-ingliz">0%</div>
+        </div>
+        <div class="world glass" data-world="tabiat" onclick="enterWorld('Tabiatshunoslik')">
+          <div class="world-glow"></div>
+          <div class="world-icon">🌍</div>
+          <div class="world-name">Tabiat Sayyorasi</div>
+          <div class="world-progress"><div class="wp-fill" id="wp-tabiat"></div></div>
+          <div class="world-pct" id="pct-tabiat">0%</div>
+        </div>
+        <div class="world glass" data-world="science" onclick="enterWorld('Science')">
+          <div class="world-glow"></div>
+          <div class="world-icon">🔬</div>
+          <div class="world-name">Science Laboratoriyasi</div>
+          <div class="world-progress"><div class="wp-fill" id="wp-science"></div></div>
+          <div class="world-pct" id="pct-science">0%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAT -->
+    <section class="page" id="page-chat">
+      <div class="chat-container glass">
+        <div class="chat-top">
+          <div class="chat-top-left"><img class="chat-mascot-img" src="https://i.ibb.co/SwkCVRc9/580077c1-8358-4fe3-92ff-e50548ea6ff6.png" alt="AI"><span class="chat-mascot" id="chatMascot" style="display:none">🧑‍🎓</span><span class="chat-subject" id="chatSubject">Matematika</span></div>
+          <div class="chat-top-right">
+            <button class="chat-clear" onclick="clearChat()">🔄 Yangilash</button>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="msg ai">
+            <div class="msg-avatar ai-av">🧑‍🎓</div>
+            <div class="msg-bubble">Salom, bolajon! Men SmartBolajon AI — sening do'sting va ustozingman! 🌟<br><br>Menga istalgan savolingni ber, men senga tushuntirib beraman! 😊</div>
+          </div>
+        </div>
+        <div class="chat-subjects-row" id="chatSubjectsRow">
+          <button onclick="switchChatSubject('Matematika')">📐</button>
+          <button onclick="switchChatSubject('Ona tili')">📖</button>
+          <button onclick="switchChatSubject("O'qish")">📚</button>
+          <button onclick="switchChatSubject('Ingliz tili')">🌐</button>
+          <button onclick="switchChatSubject('Tabiatshunoslik')">🌿</button>
+          <button onclick="switchChatSubject('Science')">🔬</button>
+        </div>
+        <div class="chat-input-wrap">
+          <textarea id="chatInput" placeholder="Savolingni yoz..." rows="1" onkeydown="handleChatKey(event)" oninput="autoResize(this)"></textarea>
+          <button class="chat-send" onclick="sendChat()">➡️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES -->
+    <section class="page" id="page-games">
+      <div class="page-header"><h2 class="page-title">🎮 O'yinlar</h2><p class="page-sub">O'ynab turib o'rgan! Har bir o'yin bilim beradi.</p></div>
+      <hr class="section-divider">
+      <div class="games-grid">
+        <button class="game-card glass" onclick="playGame('math')"><div class="game-glow"></div><span class="game-icon">🔢</span><span class="game-name">Matematika jangi</span><span class="game-desc">Misollarni tez yech</span></button>
+        <button class="game-card glass" onclick="playGame('memory')"><div class="game-glow"></div><span class="game-icon">🧩</span><span class="game-name">Xotira o'yini</span><span class="game-desc">Juftliklarni top</span></button>
+        <button class="game-card glass" onclick="playGame('word')"><div class="game-glow"></div><span class="game-icon">🔤</span><span class="game-name">So'z topish</span><span class="game-desc">So'zlarni yig'</span></button>
+        <button class="game-card glass" onclick="playGame('speed')"><div class="game-glow"></div><span class="game-icon">⚡</span><span class="game-name">Tezkor savol</span><span class="game-desc">30 soniyada yech</span></button>
+      </div>
+      <div id="gameArea"></div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="page" id="page-profile">
+      <hr class="section-divider">
+      <div class="profile-header glass-premium">
+        <div class="profile-bg-shapes"><div class="shape s1"></div><div class="shape s2"></div></div>
+        <div class="profile-avatar"><img class="profile-logo-img" src="https://i.ibb.co/SwkCVRc9/580077c1-8358-4fe3-92ff-e50548ea6ff6.png" alt="SmartBolajon AI"></div>
+        <h2 class="profile-name" id="profileName">Bolajon</h2>
+        <div class="profile-level" id="profileLevel">1-daraja o'quvchi</div>
+        <div class="profile-xp-bar"><div class="xp-fill" id="xpFill"></div></div>
+        <div class="profile-xp-text"><span id="xpCurrent">0</span> / <span id="xpNext">80</span> XP</div>
+      </div>
+      <div class="profile-section"><h3>🏅 Medallar</h3><div class="badges-row" id="badgesRow"></div></div>
+      <div class="profile-section"><h3>📊 Statistika</h3>
+        <div class="stats-grid">
+          <div class="pstat glass-light"><span class="pstat-icon">💬</span><span class="pstat-num" id="statChats">0</span><span class="pstat-lbl">suhbat</span></div>
+          <div class="pstat glass-light"><span class="pstat-icon">🧠</span><span class="pstat-num" id="statQuizzes">0</span><span class="pstat-lbl">test</span></div>
+          <div class="pstat glass-light"><span class="pstat-icon">✅</span><span class="pstat-num" id="statCorrect">0</span><span class="pstat-lbl">to'g'ri</span></div>
+          <div class="pstat glass-light"><span class="pstat-icon">🔥</span><span class="pstat-num" id="statStreak">0</span><span class="pstat-lbl">kun</span></div>
+        </div>
+      </div>
+      <div class="profile-section"><h3>🌍 Dunyolar bo'yicha</h3><div id="worldStats" class="world-stats"></div></div>
+    </section>
+
+    <!-- TELEGRAM BOT PAGE -->
+    <section class="page" id="page-telegram">
+      <div class="page-header"><h2 class="page-title">✈️ Telegram bot</h2><p class="page-sub">SmartBolajon AI Telegram orqali ham yoningizda!</p></div>
+      <hr class="section-divider">
+      <div class="tg-hero glass-premium">
+        <div class="tg-bot-avatar"><img class="tg-logo-img" src="https://i.ibb.co/SwkCVRc9/580077c1-8358-4fe3-92ff-e50548ea6ff6.png" alt="SmartBolajon AI"></div>
+        <h3>@SmartBolajon_AI_Bot</h3>
+        <p>Telegramda ham AI ustozingiz bilan suhbatlashing, test ishlang va o'yin o'ynang!</p>
+        <a class="tg-open-btn" href="https://t.me/SmartBolajon_AI_Bot" target="_blank" rel="noopener">
+          <span class="tg-icon">✈️</span> Telegramda ochish
+        </a>
+      </div>
+      <div class="tg-features-grid">
+        <div class="tg-feat glass"><span class="tg-feat-icon">💬</span><span class="tg-feat-title">AI suhbat</span><span class="tg-feat-desc">Bot bilan istalgan fandan suhbatlashing</span></div>
+        <div class="tg-feat glass"><span class="tg-feat-icon">🧠</span><span class="tg-feat-title">Testlar</span><span class="tg-feat-desc">Har safar yangi savollar bilan</span></div>
+        <div class="tg-feat glass"><span class="tg-feat-icon">🎮</span><span class="tg-feat-title">O'yinlar</span><span class="tg-feat-desc">Matematika va so'z topish o'yinlari</span></div>
+        <div class="tg-feat glass"><span class="tg-feat-icon">⭐</span><span class="tg-feat-title">XP va daraja</span><span class="tg-feat-desc">Ballar to'plab, darajangizni oshiring</span></div>
+        <div class="tg-feat glass"><span class="tg-feat-icon">🎁</span><span class="tg-feat-title">Kunlik sovg'a</span><span class="tg-feat-desc">Har kuni bonus XP oling</span></div>
+        <div class="tg-feat glass"><span class="tg-feat-icon">🏆</span><span class="tg-feat-title">Reyting</span><span class="tg-feat-desc">Eng zo'r o'quvchilar ro'yxati</span></div>
+      </div>
+      <div class="tg-howto glass">
+        <h3>📌 Qanday ishlatiladi?</h3>
+        <div class="howto-steps">
+          <div class="step"><span class="step-num">1</span><span>Telegramda @SmartBolajon_AI_Bot ni toping</span></div>
+          <div class="step"><span class="step-num">2</span><span>/start buyrug'ini yuboring</span></div>
+          <div class="step"><span class="step-num">3</span><span>Tugmalardan birini tanlab, o'rganishni boshlang!</span></div>
+        </div>
+        <div class="tg-qr-placeholder">
+          <span class="qr-icon">📱</span>
+          <span>@SmartBolajon_AI_Bot</span>
+        </div>
+      </div>
+      <div class="tg-sync glass">
+        <h3>🔄 Web va bot ma'lumotlari sinxron</h3>
+        <p>Saytda va Telegram botda to'plagan XP, daraja va medallaringiz bir xil! (Tez kunda)</p>
+      </div>
+    </section>
+
+    <!-- PARENTS -->
+    <section class="page" id="page-parents">
+      <div class="page-header"><h2 class="page-title">👨‍👩‍👧 Ota-onalar paneli</h2><p class="page-sub">Farzandingizning rivojlanishini kuzating</p></div>
+      <hr class="section-divider">
+      <div class="parents-grid">
+        <div class="parent-card glass"><h3>📊 Haftalik hisobot</h3><div id="weeklyReport">Ma'lumot to'planmoqda...</div></div>
+        <div class="parent-card glass"><h3>💪 Kuchli tomonlar</h3><div id="strengths">Hali ma'lumot yo'q</div></div>
+        <div class="parent-card glass"><h3>📈 Zaif tomonlar</h3><div id="weaknesses">Hali ma'lumot yo'q</div></div>
+        <div class="parent-card glass"><h3>🎯 Tavsiyalar</h3><div id="recommendations">Ko'proq test ishlang!</div></div>
+      </div>
+      <div class="parent-card glass" style="margin-top:12px"><h3>⏱️ Faollik</h3><div id="studyTime">Bugun: 0 daqiqa</div></div>
+    </section>
+
+  </main>
+
+  <!-- CONFETTI -->
+  <div id="confettiContainer" class="confetti-container"></div>
+
+  <!-- CELEBRATION MODAL -->
+  <div id="celebrationModal" class="celebration-modal" style="display:none" onclick="this.style.display='none'">
+    <div class="celeb-content glass-premium">
+      <div class="celeb-emoji" id="celebEmoji">🎉</div>
+      <div class="celeb-title" id="celebTitle">Zo'r ish!</div>
+      <div class="celeb-sub" id="celebSub">Sen bugun ajoyib ishlading!</div>
+      <div class="celeb-xp" id="celebXP">+10 XP</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
